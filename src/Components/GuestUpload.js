@@ -84,24 +84,24 @@ export default function GuestUpload(props) {
 
     return (
         <div className='parenth'>
-            <div className="container d-flex justify-content-cenetr  mt-5 " style={{ maxWidth: "600px" }}>
+            <div className="container d-grid justify-content-center align-items-center mt-5 " style={{ width: "800px",height:'500px' }}>
                 <div className="GuestUpload container  rounded-4 p-3 bg-black border border-white border-3" >
                     <form onSubmit={handleUpload} id='form' >
                         <div className="row text-center mb-3">
-                            <h1 style={{ color: 'white' }}>Upload Tire</h1>
+                            <h1 style={{ color: 'white',fontSize:'100px ' }}>Upload Tire</h1>
                         </div>
                         <div className="image row">
-                            <div className="col">
-                                <input style={{ borderColor: 'black' }} onChange={handleFileChange} type="file" multiple accept="image/*" name="tyre" className="image form-control " required />
+                            <div className="col mt-4">
+                                <input style={{ borderColor: 'black'}} onChange={handleFileChange} type="file" multiple accept="image/*" name="tyre" className="image form-control " required />
                             </div>
                             <div className="row">
-                                <div className="col mt-2 ">
+                                <div className="col mt-4 ">
                                     <Link to="/guest"
-                                        className="btn btn-warning" >Go Back
+                                        className="btn btn-warning btn-lg" >Go Back
                                     </Link>
                                 </div>
-                                {res && !loader && <div className="col mt-2">
-                                    <button className="btn btn-success mb-2 ms-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Result</button>
+                                {res && !loader && <div className="col mt-4">
+                                    <button className="btn btn-success btn-lg mb-2 ms-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Result</button>
                                     <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" >
                                             <div class="modal-content">
@@ -135,8 +135,8 @@ export default function GuestUpload(props) {
                                         </div>
                                     </div>
                                 </div>}
-                                <div className="col-sm-2">
-                                    <button type='submit' className="btn btn-primary mt-2 mb-2 ">Submit</button>
+                                <div className="col-sm-2 mt-4">
+                                    <button type='submit' className="btn btn-primary btn-lg mt-2 mb-2 ">Submit</button>
                                 </div>
                             </div>
                             <div className="row mb-2">

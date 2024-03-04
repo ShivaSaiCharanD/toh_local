@@ -15,9 +15,6 @@ router.use(cors({
 router.post('/feedback',async (req, res) => {
     console.log("Feedback Route");
     const { name, email, feedback } = req.body;
-    // const name = req.body.name;
-    // const email = req.body.email;
-    // const feedback = req.body.feedback;
     console.log(name, email, feedback); 
 
     const saveData = new FeedbackData({
@@ -28,6 +25,7 @@ router.post('/feedback',async (req, res) => {
     try{
         await saveData.save();
         console.log("Feedback saved successfully");
+        res.send("Data saved successfully");
     }
     catch(e){
         console.log("Error saving feedback: ", e);

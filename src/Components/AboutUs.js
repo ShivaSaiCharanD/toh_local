@@ -24,7 +24,10 @@ export default function AboutUs(props) {
   };
 
     try{
-        await axios.post('http://localhost:4000/feedback', sendData);
+        const response = await axios.post('http://localhost:4000/feedback', sendData);
+        if(response){
+          document.getElementById('feedbackF').reset();
+        }
     }
     catch(e){
         console.log(e);
@@ -103,13 +106,13 @@ export default function AboutUs(props) {
             <h1>Contact Us On:</h1>
             
             <div className="d-flex">
-              <Link to='https://mail.google.com/mail/u/0/#inbox?compose=new' target="_blank" rel="noopener noreferrer">
+              <Link to='mailto:tvarun2014@gmail.com' target="_blank" rel="noopener noreferrer">
                 <span className="material-symbols-outlined" style={{ color: "red" }}>
                   mail 
                 </span>
               </Link>
             </div>
-            <form onSubmit={feedbackForm}>
+            <form id='feedbackF' onSubmit={feedbackForm}>
             <div>
               <label classname="form-label">Name</label>
               <input type="text" key='name' className="form-control"/>

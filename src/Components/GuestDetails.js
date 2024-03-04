@@ -224,21 +224,21 @@ export default function GuestDetails(props) {
 
     return (
 
-        <div className="parenth ">
-            <div className='GuestDetails container  rounded-4 p-4 bg-black  border border-3 border-white mt-5' style={{ maxWidth: "600px" }} >
+        <div className="parenth d-grid justify-content-center align-items-center mb-5">
+            <div className='GuestDetails container rounded-4 p-4 bg-black  border border-3 border-white mb-5' style={{ maxWidth: "600px" }} >
                 <div className='row'>
                     <form onSubmit={handleSubmit}>
                         <div className='col'>
                             <h1 style={{ color: 'white' }}>Check Your Vehicle Details</h1>
                         </div>
-                        <div className="col">
-                            <input type="text" onChange={handleVnoChange} className="form-control border border-black" placeholder='VehicleNumber' name="VehicleNumber" id="vehicleU" required />
+                        <div className="col mt-5">
+                            <input type="text" onChange={handleVnoChange} style={{height:'60px'}} className="form-control border border-black" placeholder='VehicleNumber' name="VehicleNumber" id="vehicleU" required />
                         </div>
                         <div className="row">
-                            <div className="col-sm-3 mt-2">
-                                <Link to="/guest" className="btn btn-warning back" id="blackbut">Go Back</Link>
+                            <div className="col-sm-3 mt-2 mt-5">
+                                <Link to="/guest" className="btn btn-warning  back" id="blackbut">Go Back</Link>
                             </div>
-                            {res && <div className="col-sm-3 mt-2">
+                            {res && <div className="col-sm-3 mt-2 mt-5">
                                 <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#backdrop" >Result</button>
                                 <div className="modal fade" id="backdrop" tabIndex="-1" aria-labelledby="backdropLabel" aria-hidden="true">
                                     <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -276,7 +276,7 @@ export default function GuestDetails(props) {
                             {NoData && <div className="col-sm-3 mt-2 me-1">
                                 <p class="btn btn-danger">NotFound</p>
                             </div>}
-                            <div className="col-sm-3 mt-2">
+                            <div className="col-sm-3 mt-5">
                                 <button type="submit" className="btn btn-primary detSub">Submit</button>
                             </div>
                         </div>
