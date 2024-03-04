@@ -3,17 +3,21 @@ const router = express.Router();
 const cors = require('cors');
 const axios = require('axios');
 const bodyParser = require('body-parser');
+const multer = require('multer')
 const FeedbackData = require('../models/FeedbackSch');
-
+// const getfields = multer();
 router.use(bodyParser.json());
 router.use(cors({
     origin: 'http://localhost:3000',
     credentials: true,
 }));
 
-router.post('/feedback', async (req, res) => {
+router.post('/feedback',async (req, res) => {
     console.log("Feedback Route");
     const { name, email, feedback } = req.body;
+    // const name = req.body.name;
+    // const email = req.body.email;
+    // const feedback = req.body.feedback;
     console.log(name, email, feedback); 
 
     const saveData = new FeedbackData({
