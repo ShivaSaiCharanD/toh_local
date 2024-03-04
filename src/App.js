@@ -17,6 +17,7 @@ import CheckRecords from './Components/TollCheckRecords';
 import NoAccess from './Components/NoAccess';
 import './all_css/Home.css';
 import './all_css/Loader.css';
+import './all_css/navbar.css'
 import './stylesheet.css';
 import './street_cred-webfont.woff';
 import './street_cred-webfont.woff2';
